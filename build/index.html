@@ -43,43 +43,22 @@
             <a href ng-click="tab.setTab(3)">{{tab.phones[2].title}}</a>
         </li>
     </ul>
-
+        <div class="main__content" >
+            <blockquote ng-show="tab.isSet(1)">{{tab.phones[0].description}}</blockquote>
+            <blockquote ng-show="tab.isSet(2)">{{tab.phones[1].description}}</blockquote>
+            <blockquote ng-show="tab.isSet(3)">{{tab.phones[2].description}}</blockquote>
+        </div>
     <!--  Description Tab's Content  -->
-    <div class="main__left">
-        <div class="main__content" ng-show="tab.isSet(1)">
-            <blockquote>{{tab.phones[0].description}}</blockquote>
-            <!--<img ng-src={{tab.phones[0].img}} alt="">-->
-        </div>
-        <div ng-show="tab.isSet(2)">
-            <blockquote>{{tab.phones[1].description}}</blockquote>
-            <!--<img ng-src={{tab.phones[1].img}} alt="">-->
-        </div>
-        <div ng-show="tab.isSet(3)">
-            <blockquote>{{tab.phones[2].description}}</blockquote>
-            <!--<img ng-src={{tab.phones[2].img}} alt="">-->
-        </div>
-    </div>
-    <div class="main__right">
-        <div class="main__content" ng-show="tab.isSet(1)">
-            <blockquote>{{tab.phones[0].description}}</blockquote>
-            <!--<img ng-src={{tab.phones[0].img}} alt="">-->
-        </div>
-        <div ng-show="tab.isSet(2)">
-            <blockquote>{{tab.phones[1].description}}</blockquote>
-            <!--<img ng-src={{tab.phones[1].img}} alt="">-->
-        </div>
-        <div ng-show="tab.isSet(3)">
-            <blockquote>{{tab.phones[2].description}}</blockquote>
-            <!--<img ng-src={{tab.phones[2].img}} alt="">-->
-        </div>
-    </div>
 
+    <div class="phone__container" >
+        <img ng-show="tab.isSet(1)" ng-src={{tab.phones[0].img}} alt="">
+        <img ng-show="tab.isSet(2)" ng-src={{tab.phones[1].img}} alt="">
+        <img ng-show="tab.isSet(3)" ng-src={{tab.phones[2].img}} alt="">
+    </div>
 
 
 </section>
 
-<section class="header">
-    <!--Footer-->
-</section>
+
 </body>
 </html>
