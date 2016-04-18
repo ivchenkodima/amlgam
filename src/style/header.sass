@@ -1,3 +1,51 @@
 
 .header
   width: 100%
+  display: block
+  padding: 0
+  margin: 0
+  &__top
+    height: 38px
+    background-color: #f4f4f4
+    color: #afac9c
+    text-transform: uppercase
+    text-align: center
+    vertical-align: middle
+    font-weight: bold
+    line-height: 38px
+    span
+        font-weight: normal
+  &__container
+     border-bottom: 1px solid #ebeae6
+  &__content
+    margin: 0 auto
+    max-width: 1190px
+    height: 75px
+  &__logo
+    display: inline-block
+    text-indent: -9999px
+    width: 50px
+    height: 50px
+    background: url(../img/logo.svg)
+    background-size: 50px 50px
+    margin: 13px 0
+    text-align: center
+  &__contact
+    float: right
+    height: 75px
+    width: 110px
+    vertical-align: middle
+    line-height: 75px
+    text-align: center
+    position: relative
+    &::after
+        content: ""
+        display: block
+        &:hover
+          position: absolute
+          border-bottom: 3px solid #ffdd4e
+          top: -3px
+
+
+
+
