@@ -1,5 +1,46 @@
-<!--About: Amlgam is a messaging app that connects user with his lovely messengers.-->
+<section class='main' ng-controller="TabController as tab">
+    <ul class="main__nav">
+        <li ng-class="{ active:tab.isSet(1) }">
+            <a href ng-click="tab.setTab(1)">{{tab.phones[0].title}}</a>
+        </li>
+        <li ng-class="{ active:tab.isSet(2) }">
+            <a href ng-click="tab.setTab(2)">{{tab.phones[1].title}}</a>
+        </li>
+        <li ng-class="{ active:tab.isSet(3) }">
+            <a href ng-click="tab.setTab(3)">{{tab.phones[2].title}}</a>
+        </li>
+    </ul>
 
-<!--Switching: We want Amlgam to be simple for everybody. So now switching is 2 taps, no more.-->
+    <!--  Description Tab's Content  -->
+    <div class="main__left">
+        <div class="main__content" ng-show="tab.isSet(1)">
+            <blockquote>{{tab.phones[0].description}}</blockquote>
+            <!--<img ng-src={{tab.phones[0].img}} alt="">-->
+        </div>
+        <div ng-show="tab.isSet(2)">
+            <blockquote>{{tab.phones[1].description}}</blockquote>
+            <!--<img ng-src={{tab.phones[1].img}} alt="">-->
+        </div>
+        <div ng-show="tab.isSet(3)">
+            <blockquote>{{tab.phones[2].description}}</blockquote>
+            <!--<img ng-src={{tab.phones[2].img}} alt="">-->
+        </div>
+    </div>
+    <div class="main__right">
+        <div class="main__content" ng-show="tab.isSet(1)">
+            <blockquote>{{tab.phones[0].description}}</blockquote>
+            <!--<img ng-src={{tab.phones[0].img}} alt="">-->
+        </div>
+        <div ng-show="tab.isSet(2)">
+            <blockquote>{{tab.phones[1].description}}</blockquote>
+            <!--<img ng-src={{tab.phones[1].img}} alt="">-->
+        </div>
+        <div ng-show="tab.isSet(3)">
+            <blockquote>{{tab.phones[2].description}}</blockquote>
+            <!--<img ng-src={{tab.phones[2].img}} alt="">-->
+        </div>
+    </div>
 
-<!--Custom Answers: To be competitive is to be fast. Now you can use your custom messages for answering.-->
+
+
+</section>
