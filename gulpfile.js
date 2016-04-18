@@ -116,7 +116,6 @@ gulp.task('watch', function(){
 gulp.task('webserver', function () {
     browserSync(config);
 });
-
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
