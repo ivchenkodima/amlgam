@@ -48,12 +48,14 @@
             <blockquote ng-show="tab.isSet(2)">{{tab.phones[1].description}}</blockquote>
             <blockquote ng-show="tab.isSet(3)">{{tab.phones[2].description}}</blockquote>
         </div>
-    <!--  Description Tab's Content  -->
 
     <div class="phone__container" >
-        <img ng-show="tab.isSet(1)" ng-src={{tab.phones[0].img}} alt="">
-        <img ng-show="tab.isSet(2)" ng-src={{tab.phones[1].img}} alt="">
-        <img ng-show="tab.isSet(3)" ng-src={{tab.phones[2].img}} alt="">
+        <img class="phone"  src="../img/phone.png" alt="">
+        <div class="phone__content">
+            <img class="phone__item" ng-show="tab.isSet(1)" ng-src={{tab.phones[0].img}} alt="">
+            <img class="phone__item" ng-show="tab.isSet(2)" ng-src={{tab.phones[1].img}} alt="">
+            <img class="phone__item" ng-show="tab.isSet(3)" ng-src={{tab.phones[2].img}} alt="">
+        </div>
     </div>
 
 

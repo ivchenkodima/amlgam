@@ -1,21 +1,38 @@
 .main
   display: block
   max-width: 920px
-  margin: 78px
+  margin: 78px auto
   &__nav
+    max-width: 340px
     display: block
+    list-style-type: none
     li
       display: inline-block
       list-style-type: none
       padding: 0 11px
+      a
+        text-decoration: none
+        color: #ffdd4e
 
+  &__content
+    max-width: 340px
+    line-height: 25px
+    font: 14px
+    font-family: "Proxima Nova"
+    color: #afac9c
 .phone__container
-    position: relative
-    background-image: src('../images/phone.png')
-img
+  position: relative
+  z-index: 2
+.phone
+  height: 540px
+.phone__content
   position: absolute
-  height: 500px
-  width: auto
-  float: right
-  top: 0
+  top: 63px
+  left: 19px
+  img
+    height: 416px
+    z-index: 1
+
+
+
 
