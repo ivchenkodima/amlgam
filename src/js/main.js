@@ -1,5 +1,5 @@
 (function() {
-    var app = angular.module('app', []);
+    var app = angular.module('app', ['ngAnimate']);
 
 
     app.controller("TabController", function() {
@@ -28,6 +28,6 @@
         img: "img/third_screen.png",
         description: "Custom Answers: To be competitive is to be fast. Now you can use your custom messages for answering."
     }];
-    
+
 })();
 
