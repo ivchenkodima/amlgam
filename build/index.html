@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Я собираю проекты как рок звезда</title>
     <link type='image/x-icon' href='img/favicon.png' rel='Shortcut Icon'>
-    <link rel='stylesheet' href='/css/style.css' type='text/css'/>
+    <link rel='stylesheet' href='css/style.css' type='text/css'/>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
     <script src="js/main.js"></script>
@@ -23,7 +23,9 @@
                 <div class="main-logo"></div>
             </div>
             <div class="header__contact">
-                <p>contact</p>
+                <p>
+                    <a href="#email">contact</a>
+                </p>
                 <div class="line"></div>
             </div>
         </div>
@@ -50,7 +52,7 @@
 
 
     <div class="main__container" >
-        <img class="phone"  src="../img/phone.png" alt="">
+        <img class="phone" src="img/phone.png" alt="">
         <div class="phone__content">
             <img  ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-show="tab.isSet(1)" ng-src={{tab.phones[0].img}} alt="">
             <img  ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-show="tab.isSet(2)" ng-src={{tab.phones[1].img}} alt="">
@@ -64,8 +66,9 @@
 <section class="footer clearfix">
     <div class="footer__subscribe">
         <h3>Get lattes news!</h3>
-        <form action="">
+        <form action="" >
             <div class="email">
+                <a name="email"></a>
                 <input placeholder="example@mail.com" type="email" name="email"/>
                 <button type="submit">SEND</button>
             </div>
@@ -75,8 +78,8 @@
 
 <section class="socials">
     <ul>
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Instagram</a></li>
+        <li><a href="https://www.facebook.com/Amlgam-765525106911842" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/amlgamapp/" target="_blank">Instagram</a></li>
     </ul>
 </section>
 </body>

@@ -1,10 +1,7 @@
 .main
   max-width: 870px
   margin: 0 auto
-
-
   vertical-align: middle
-
 .main__nav
   padding-top: 264px
   float: left
@@ -12,7 +9,10 @@
   display: block
   list-style-type: none
   height: 100%
-
+  +max-screen(670)
+    float: none
+    margin: 0 auto
+    padding-top: 20px
   ul
     margin: 0
   li
@@ -26,7 +26,6 @@
     a
       text-decoration: none
       color: #ffdd4e
-
 blockquote
   margin-top: 55px
   max-width: 340px
@@ -34,17 +33,37 @@ blockquote
   font: 18px
   font-family: "Proxima Nova"
   color: #afac9c
+  +max-screen(670)
+    margin: 20px auto
+    text-align: center
 .main__container
   float: right
   position: relative
   z-index: 2
   margin: 78px auto
+  +max-screen(900)
+    padding-right: 40px
+  +max-screen(670)
+    padding: 0
+    float: none
+    display: block
+    margin: 0 auto
+    text-align: center
+
+
+
 .phone
   height: 540px
 .phone__content
   position: absolute
   top: 63px
   left: 19px
+  +max-screen(670)
+    padding: 0
+    float: none
+    display: block
+    margin: 0 auto
+    text-align: center
   img
     height: 416px
     z-index: 1
