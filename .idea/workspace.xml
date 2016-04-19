@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45a1c7ef-078a-4584-a30b-42c3e9fd4e4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/style/animation.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/css/style.css" afterPath="$PROJECT_DIR$/build/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/main.js" afterPath="$PROJECT_DIR$/build/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/main.js" afterPath="$PROJECT_DIR$/src/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/footer.sass" afterPath="$PROJECT_DIR$/src/style/footer.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/main.sass" afterPath="$PROJECT_DIR$/src/style/main.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/style.sass" afterPath="$PROJECT_DIR$/src/style/style.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/template/footer.html" afterPath="$PROJECT_DIR$/src/template/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/template/header.html" afterPath="$PROJECT_DIR$/src/template/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/template/main.html" afterPath="$PROJECT_DIR$/src/template/main.html" />
     </list>
     <ignored path="site.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,11 +56,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="footer.sass" pinned="false" current-in-tab="true">
+          <file leaf-file-name="footer.sass" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/style/footer.sass">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
                   <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -123,7 +122,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/html/index.html" />
         <option value="$PROJECT_DIR$/src/scripts/main.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/build/js/main.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -141,6 +139,7 @@
         <option value="$PROJECT_DIR$/src/style/main.sass" />
         <option value="$PROJECT_DIR$/src/template/footer.html" />
         <option value="$PROJECT_DIR$/src/style/footer.sass" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -346,12 +345,12 @@
       <workItem from="1461009828151" duration="24000" />
       <workItem from="1461009892651" duration="328000" />
       <workItem from="1461010296712" duration="685000" />
-      <workItem from="1461011050224" duration="15419000" />
+      <workItem from="1461011050224" duration="15600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21260000" />
+    <option name="totallyTimeSpent" value="21441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -533,13 +532,6 @@
         <state relative-caret-position="30">
           <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -727,6 +719,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
