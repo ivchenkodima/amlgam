@@ -5,6 +5,7 @@
     <title>Я собираю проекты как рок звезда</title>
     <link rel='stylesheet' href='/css/style.css' type='text/css'/>
     <script src="js/angular.min.js"></script>
+    <script rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>
     <script src="js/main.js"></script>
 
 
@@ -25,42 +26,59 @@
                 <p>contact</p>
                 <div class="line"></div>
             </div>
-
-
         </div>
     </div>
 </section>
 
 <section class='main' ng-controller="TabController as tab">
-    <ul class="main__nav">
-        <li ng-class="{ active:tab.isSet(1) }">
-            <a href ng-click="tab.setTab(1)">{{tab.phones[0].title}}</a>
-        </li>
-        <li ng-class="{ active:tab.isSet(2) }">
-            <a href ng-click="tab.setTab(2)">{{tab.phones[1].title}}</a>
-        </li>
-        <li ng-class="{ active:tab.isSet(3) }">
-            <a href ng-click="tab.setTab(3)">{{tab.phones[2].title}}</a>
-        </li>
-    </ul>
-        <div class="main__content" >
-            <blockquote ng-show="tab.isSet(1)">{{tab.phones[0].description}}</blockquote>
-            <blockquote ng-show="tab.isSet(2)">{{tab.phones[1].description}}</blockquote>
-            <blockquote ng-show="tab.isSet(3)">{{tab.phones[2].description}}</blockquote>
-        </div>
+    <div class="main__nav">
+        <ul>
+            <li ng-class="{ active:tab.isSet(1) }">
+                <a href ng-click="tab.setTab(1)">{{tab.phones[0].title}}</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(2) }">
+                <a href ng-click="tab.setTab(2)">{{tab.phones[1].title}}</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(3) }">
+                <a href ng-click="tab.setTab(3)">{{tab.phones[2].title}}</a>
+            </li>
+        </ul>
+        <blockquote ng-show="tab.isSet(1)">{{tab.phones[0].description}}</blockquote>
+        <blockquote ng-show="tab.isSet(2)">{{tab.phones[1].description}}</blockquote>
+        <blockquote ng-show="tab.isSet(3)">{{tab.phones[2].description}}</blockquote>
+    </div>
 
-    <div class="phone__container" >
+
+    <div class="main__container" >
         <img class="phone"  src="../img/phone.png" alt="">
         <div class="phone__content">
-            <img class="phone__item" ng-show="tab.isSet(1)" ng-src={{tab.phones[0].img}} alt="">
-            <img class="phone__item" ng-show="tab.isSet(2)" ng-src={{tab.phones[1].img}} alt="">
-            <img class="phone__item" ng-show="tab.isSet(3)" ng-src={{tab.phones[2].img}} alt="">
+            <img  ng-animate=" 'animate' " ng-show="tab.isSet(1)" ng-src={{tab.phones[0].img}} alt="">
+            <img  ng-animate=" 'animate' " ng-show="tab.isSet(2)" ng-src={{tab.phones[1].img}} alt="">
+            <img  ng-animate=" 'animate' " ng-show="tab.isSet(3)" ng-src={{tab.phones[2].img}} alt="">
         </div>
     </div>
 
 
 </section>
 
+<section class="footer clearfix">
+    <div class="footer__subscribe">
+        <h3>Get lattes news!</h3>
+        <form action="">
+            <div class="email">
+                <input type="text"/>
+                <button type="submit">SEND</button>
+            </div>
+        </form>
+    </div>
 
+
+</section>
+<!--<div class="footer__socials">-->
+<!--<ul>-->
+<!--<li><a href="">Facebook</a></li>-->
+<!--<li><a href="">Instagram</a></li>-->
+<!--</ul>-->
+<!--</div>-->
 </body>
 </html>

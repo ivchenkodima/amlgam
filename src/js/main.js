@@ -28,7 +28,6 @@
         img: "img/third_screen.png",
         description: "Custom Answers: To be competitive is to be fast. Now you can use your custom messages for answering."
     }];
-
-
+    
 })();
 

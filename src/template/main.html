@@ -1,27 +1,28 @@
 <section class='main' ng-controller="TabController as tab">
-    <ul class="main__nav">
-        <li ng-class="{ active:tab.isSet(1) }">
-            <a href ng-click="tab.setTab(1)">{{tab.phones[0].title}}</a>
-        </li>
-        <li ng-class="{ active:tab.isSet(2) }">
-            <a href ng-click="tab.setTab(2)">{{tab.phones[1].title}}</a>
-        </li>
-        <li ng-class="{ active:tab.isSet(3) }">
-            <a href ng-click="tab.setTab(3)">{{tab.phones[2].title}}</a>
-        </li>
-    </ul>
-        <div class="main__content" >
-            <blockquote ng-show="tab.isSet(1)">{{tab.phones[0].description}}</blockquote>
-            <blockquote ng-show="tab.isSet(2)">{{tab.phones[1].description}}</blockquote>
-            <blockquote ng-show="tab.isSet(3)">{{tab.phones[2].description}}</blockquote>
-        </div>
+    <div class="main__nav">
+        <ul>
+            <li ng-class="{ active:tab.isSet(1) }">
+                <a href ng-click="tab.setTab(1)">{{tab.phones[0].title}}</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(2) }">
+                <a href ng-click="tab.setTab(2)">{{tab.phones[1].title}}</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(3) }">
+                <a href ng-click="tab.setTab(3)">{{tab.phones[2].title}}</a>
+            </li>
+        </ul>
+        <blockquote ng-show="tab.isSet(1)">{{tab.phones[0].description}}</blockquote>
+        <blockquote ng-show="tab.isSet(2)">{{tab.phones[1].description}}</blockquote>
+        <blockquote ng-show="tab.isSet(3)">{{tab.phones[2].description}}</blockquote>
+    </div>
 
-    <div class="phone__container" >
+
+    <div class="main__container" >
         <img class="phone"  src="../img/phone.png" alt="">
         <div class="phone__content">
-            <img class="phone__item" ng-show="tab.isSet(1)" ng-src={{tab.phones[0].img}} alt="">
-            <img class="phone__item" ng-show="tab.isSet(2)" ng-src={{tab.phones[1].img}} alt="">
-            <img class="phone__item" ng-show="tab.isSet(3)" ng-src={{tab.phones[2].img}} alt="">
+            <img  ng-animate=" 'animate' " ng-show="tab.isSet(1)" ng-src={{tab.phones[0].img}} alt="">
+            <img  ng-animate=" 'animate' " ng-show="tab.isSet(2)" ng-src={{tab.phones[1].img}} alt="">
+            <img  ng-animate=" 'animate' " ng-show="tab.isSet(3)" ng-src={{tab.phones[2].img}} alt="">
         </div>
     </div>
 
