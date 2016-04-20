@@ -2,10 +2,10 @@
     var app = angular.module('app', ['ngAnimate']);
 
 
-    app.controller("TabController", function() {
+    app.controller("TabController",  function () {
+
         this.phones = phoneScreens;
         this.tab = 1;
-        console.log(this.tab);
 
         this.isSet = function(checkTab) {
             return this.tab === checkTab;
@@ -15,6 +15,29 @@
             this.tab = setTab;
         };
     });
+    app.controller("EmailController", ['$scope', function ($scope) {
+        $scope.user = null;
+        var possible = "123456789";
+        if(!unique)
+            var unique = 0;
+        for( var i=0; i < 10; i++ ){
+            unique += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+        if(unique) {
+            mixpanel.identify(unique);
+        }
+        function sendMixPanel(newUser) {
+            mixpanel.people.set({
+                "$email": newUser,
+                "$last_login": new Date()
+            });
+        }
+        $scope.addUser = function() {
+            if(!$scope.user) return;
+            sendMixPanel($scope.user);
+        };
+    }]);
+
     var phoneScreens = [{
         title: "About",
         img: "img/first_screen.png",
