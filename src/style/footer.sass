@@ -27,6 +27,7 @@
           width: 200px
       input[placeholder]
         color: #d9d8d1
+
       button
         margin-left: 10px
         width: 136px
@@ -68,3 +69,15 @@
       a
         text-decoration: none
         color: #ffd93c
+
+@mixin placeholder($color)
+  &::-webkit-input-placeholder
+    color: $color
+  &:-moz-placeholder
+    color: $color
+  &::-moz-placeholder
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
+[placeholder]
+  @include placeholder(#d9d8d1)
