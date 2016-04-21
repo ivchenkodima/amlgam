@@ -9,21 +9,29 @@
   display: block
   list-style-type: none
   height: 100%
-  +max-screen(670)
+  padding-left: 40px
+  +max-screen(710)
     float: none
     margin: 0 auto
     padding-top: 20px
+    text-align: center
+    padding-left: 20px
   ul
     margin: 0
     font-size: 12px
+    padding-left: 0
     +max-screen(400)
       padding-left: 0
   li
+    &:first-child
+      padding-left: 0
     display: inline-block
     list-style-type: none
-    padding: 0 8px
+    padding: 0 20px
     opacity: 0.5
     text-transform: uppercase
+    +max-screen(500)
+      padding: 0 10px
     &.active
       opacity: 1
       font-weight: bold
@@ -31,14 +39,14 @@
       text-decoration: none
       color: #ffdd4e
 blockquote
-  margin-top: 55px
   max-width: 340px
   line-height: 25px
   font-size: 18px
   font-family: "Proxima Nova"
   font-weight: 100
   color: #afac9c
-  +max-screen(670)
+  margin: 55px 10px 10px 0
+  +max-screen(710)
     margin: 20px auto
     text-align: center
 
@@ -49,13 +57,12 @@ blockquote
   margin: 78px auto
   +max-screen(900)
     padding-right: 40px
-  +max-screen(670)
+  +max-screen(710)
     padding: 0
     float: none
     display: block
     margin: 20px auto
     text-align: center
-
 .phone
   height: 540px
   z-index: 2
@@ -64,17 +71,10 @@ blockquote
   position: absolute
   top: 63px
   left: 19px
-  +max-screen(670)
+  +max-screen(710)
     padding: 0
     left: 50%
     margin-left: -117px
   img
     height: 416px
     z-index: 1
-
-
-
-
-
-
-
