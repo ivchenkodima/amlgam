@@ -1,19 +1,67 @@
 (function() {
     var app = angular.module('app', ['ngAnimate']);
+    app.controller("TabController",['$scope',  function ($scope) {
 
+        $scope.phoneScreens = [{
+            title: "About",
+            img: "img/first_screen.png",
+            description: "About: Amlgam is a messaging app that connects user with his lovely messengers."
+        }, {
+            title: "Switching",
+            img: "img/second_screen.png",
+            description: "Switching: We want Amlgam to be simple for everybody. So now switching is 2 taps, no more."
+        }, {
+            title: "Custom answers",
+            img: "img/third_screen.png",
 
-    app.controller("TabController",  function () {
+            description: "Custom Answers: To be competitive is to be fast. Now you can use your custom messages for answering."
+        }];
+        $scope.direction = 'left';
+        $scope.currentIndex = 0;
 
-        this.phones = phoneScreens;
-        this.tab = 1;
-
-        this.isSet = function(checkTab) {
-            return this.tab === checkTab;
+        $scope.setCurrentSlideIndex = function (index) {
+            $scope.direction = (index > $scope.currentIndex) ? 'left' : 'right';
+            $scope.currentIndex = index;
         };
 
-        this.setTab = function(setTab) {
-            this.tab = setTab;
+        $scope.isCurrentSlideIndex = function (index) {
+            return $scope.currentIndex === index;
         };
+
+        }])
+        .animation('.slide-animation', function () {
+            return {
+                beforeAddClass: function (element, className, done) {
+                    var scope = element.scope();
+
+                    if (className == 'ng-hide') {
+                        var finishPoint = element.parent().width();
+                        if(scope.direction !== 'right') {
+                            finishPoint = -finishPoint;
+                        }
+                        TweenMax.to(element, 0.5, {left: finishPoint, onComplete: done });
+                    }
+                    else {
+                        done();
+                    }
+                },
+                removeClass: function (element, className, done) {
+                    var scope = element.scope();
+
+                    if (className == 'ng-hide') {
+                        element.removeClass('ng-hide');
+
+                        var startPoint = element.parent().width();
+                        if(scope.direction === 'right') {
+                            startPoint = -startPoint;
+                        }
+                        TweenMax.fromTo(element, 0.5, { left: startPoint }, {left: 0, onComplete: done });
+                    }
+                    else {
+                        done();
+                    }
+                }
+            };
     });
     app.controller("EmailController", ['$scope', function ($scope) {
         $scope.user = null;
@@ -35,22 +83,9 @@
         $scope.addUser = function() {
             if(!$scope.user) return;
             sendMixPanel($scope.user);
+            return;
         };
     }]);
-
-    var phoneScreens = [{
-        title: "About",
-        img: "img/first_screen.png",
-        description: "About: Amlgam is a messaging app that connects user with his lovely messengers."
-    }, {
-        title: "Switching",
-        img: "img/second_screen.png",
-        description: "Switching: We want Amlgam to be simple for everybody. So now switching is 2 taps, no more."
-    }, {
-        title: "Custom answers",
-        img: "img/third_screen.png",
-        description: "Custom Answers: To be competitive is to be fast. Now you can use your custom messages for answering."
-    }];
 
 })();
 
