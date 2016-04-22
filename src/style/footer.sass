@@ -3,6 +3,7 @@
   height: 200px
   width: 100%
   background-color: #f4f4f4
+  margin-top: 20px
   &__subscribe
     max-width: 510px
     padding-top: 48px
@@ -65,10 +66,13 @@
       text-transform: uppercase
       padding: 0 22px
       font-weight: bold
-      letter-spacing: 1px
+      letter-spacing: 1.5px
       a
         text-decoration: none
         color: #ffd93c
+        &:hover
+          text-decoration: underline
+
 
 @mixin placeholder($color)
   &::-webkit-input-placeholder
