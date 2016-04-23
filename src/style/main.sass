@@ -76,6 +76,8 @@ blockquote
 .phone
   height: 540px
   overflow: hidden
+  +min-screen(710)
+    height: 648px
   &__wrap
     width: auto
 
@@ -83,6 +85,9 @@ blockquote
   position: absolute
   top: 63px
   left: 19px
+  +min-screen(710)
+    top: 75px
+    left: 23px
   +max-screen(710)
     padding: 0
     left: 50%
@@ -90,3 +95,5 @@ blockquote
   img
     height: 416px
     margin-top: 0
+    +min-screen(710)
+      height: 499.2px

@@ -30,6 +30,11 @@
 
         }])
         .animation('.slide-animation', function () {
+            var width =0;
+            console.log(window.innerWidth);
+            if (window.innerWidth > 710)
+                width = 281;
+            else width = 234;
             return {
                 beforeAddClass: function (element, className, done) {
                     var scope = element.scope();
@@ -39,7 +44,7 @@
                         if(scope.direction !== 'right') {
                             finishPoint = -finishPoint;
                         }
-                        TweenMax.fromTo(element, 0.5, {left:0}, {left: -234,"z-index":-3, onComplete: done });
+                        TweenMax.fromTo(element, 0.5, {left:0}, {left: -width,"z-index":-3, onComplete: done });
                     }
                     else {
                         done();
@@ -55,7 +60,7 @@
                         if(scope.direction === 'right') {
                             startPoint = -startPoint;
                         }
-                        TweenMax.fromTo(element, 0.5, { left: 234,"z-index":-2 }, {left: 0, onComplete: done });
+                        TweenMax.fromTo(element, 0.5, { left: width,"z-index":-2 }, {left: 0, onComplete: done });
                     }
                     else {
                         done();
