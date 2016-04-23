@@ -39,7 +39,7 @@
                         if(scope.direction !== 'right') {
                             finishPoint = -finishPoint;
                         }
-                        TweenMax.fromTo(element, 0.5, {left:0, opacity: 1}, {left: -200, opacity: .5,"z-index":-3, onComplete: done });
+                        TweenMax.fromTo(element, 0.5, {left:0}, {left: -234,"z-index":-3, onComplete: done });
                     }
                     else {
                         done();
@@ -55,7 +55,7 @@
                         if(scope.direction === 'right') {
                             startPoint = -startPoint;
                         }
-                        TweenMax.fromTo(element, 0.5, { left: 200,"z-index":-2 }, {left: 0, onComplete: done });
+                        TweenMax.fromTo(element, 0.5, { left: 234,"z-index":-2 }, {left: 0, onComplete: done });
                     }
                     else {
                         done();
