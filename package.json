@@ -1,13 +1,8 @@
 {
-  "name": "site",
+  "name": "myapp",
+  "description": "a really cool app",
   "version": "1.0.0",
-  "description": "",
-  "author": "stranger",
-  "license": "ISC",
-  "dependencies": {
-  
-  },
-  "devDependencies": {
-   
+  "engines": {
+    "node": "4.1.1"
   }
 }
