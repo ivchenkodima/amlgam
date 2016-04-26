@@ -5,6 +5,9 @@
   "engines": {
     "node": "4.1.1"
   },
+  "scripts": {
+    "prepublish": "node server.js "
+  },
   "devDependencies": {
     "connect": "^3.4.1",
     "finalhandler": "^0.4.1",
