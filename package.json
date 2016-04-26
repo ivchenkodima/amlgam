@@ -6,12 +6,10 @@
     "node": "4.1.1"
   },
   "scripts": {
-    "preinstall" : "npm install http finalhandler serve-static",
+    "preinstall": "npm install express",
     "start": "node server.js"
   },
   "devDependencies": {
-    "finalhandler": "^0.4.1",
-    "http": "0.0.0",
-    "serve-static": "^1.10.2"
+    "express": "^4.13.4"
   }
 }
