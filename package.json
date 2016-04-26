@@ -6,10 +6,10 @@
     "node": "4.1.1"
   },
   "scripts": {
+    "preinstall" : " npm install http finalhandler serve-static",
     "start": "node server.js"
   },
   "devDependencies": {
-    "connect": "^3.4.1",
     "finalhandler": "^0.4.1",
     "http": "0.0.0",
     "serve-static": "^1.10.2"
