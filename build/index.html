@@ -25,74 +25,55 @@
 
 <body >
 <section class="header">
-    <div class="header__top">
-        <p>update:
-            <span> we are launching mvp now</span>
-        </p>
-    </div>
-    <div class="header__container">
-        <div class="header__content">
-            <div class="header__logo">
-                <div class="main-logo"></div>
-            </div>
-            <div class="header__contact">
-                <p>
-                    <a href="mailto:juliano@amlgam.com">contact</a>
-                </p>
-                <div class="line"></div>
-            </div>
-        </div>
+    <div>
+        <ul class="list">
+            <li class="list__item">Process</li>
+            <li class="list__item">Launching MVP</li>
+        </ul>
     </div>
 </section>
 
-<section class='main' ng-controller="TabController">
-    <div class="main__wraper">
-        <div class="main__nav">
-            <ul>
-                <li ng-repeat="slide in phoneScreens">
-                    <a href="#"
-                       ng-class="{'active':isCurrentSlideIndex($index)}"
-                       ng-click="setCurrentSlideIndex($index);">{{slide.title}}</a></li>
-            </ul>
-            <blockquote  ng-repeat="slide in phoneScreens"
-                ng-hide="!isCurrentSlideIndex($index)"
-                >{{slide.description}}</blockquote>
-
-        </div>
-
-        <div class="main__container" >
-            <img class="phone" src="img/phone5.png" alt="">
-            <div class="phone__content">
-                <img ng-repeat="slide in phoneScreens"
-                     class="slide slider slide-animation nonDraggableImage"
-                     ng-hide="!isCurrentSlideIndex($index)"
-                     ng-src="{{slide.img}}">
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="footer clearfix" ng-controller="EmailController">
-    <div class="footer__subscribe">
-        <h3>Get latest news!</h3>
-        <form ng-submit="addUser()" onsubmit="this.reset()">
-            <div class="email">
-                <a name="email"></a>
-                <input placeholder="Your e-mail" type="email" name="email" ng-model="user"/>
-                <button type="submit">SEND</button>
-            </div>
-        </form>
+<section class='main' >
+    <img src="/img/logo.png" alt="">
+    <h2>Amlgam</h2>
+    <p>Connects your lovely messengers.</p>
+    <div class="bottom">
+        Available on the
+        <span class="store">app store</span>
+         this summer.
     </div>
 </section>
-<section class="socials">
-    <ul>
-        <li><a href="https://twitter.com/amlgamapp" target="_blank">Twitter</a></li>
-        <li><a href="https://www.facebook.com/Amlgam-765525106911842" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com/amlgamapp/" target="_blank">Instagram</a></li>
-        <li><a href="https://spark.ru/startup/amlgam" target="_blank">Spark</a></li>
-    </ul>
+
+<section class="footer clearfix">
+    <div class="one">
+        <ul >
+            <li class="store">team</li>
+            <li>
+                Juliano Kuvanzhi
+                <br>
+                Eugene Lozov
+            </li>
+        </ul>
+    </div>
+    <div class="two">
+        <ul >
+            <li class="store">social</li>
+            <li><a href=""></a>Facebook</li>
+            <li><a href=""></a>Instagram</li>
+            <li><a href=""></a>Contact us</li>
+        </ul>
+    </div>
+    <div class="three">
+        <ul >
+            <li class="store">office</li>
+            <li>
+                Kiev, Ukraine
+                <br>
+                Konovaltsa Street, 36d
+            </li>
+        </ul>
+
+    </div>
 </section>
 </body>
 </html>
